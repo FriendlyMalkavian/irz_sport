@@ -13,15 +13,26 @@
   }
 }
 
-.carousel-item img {
-  min-height: 100vh;
-  width: 2100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  object-fit: cover;
 
+
+.card-template {
+  flex: 0 0 30%; 
+  margin: 0 1.5%; 
+  max-width: 30%; 
+}
+
+@media (max-width: 768px) {
+  .card-template {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: 0 0 1rem;
+  }
+}
+
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .App-header {
