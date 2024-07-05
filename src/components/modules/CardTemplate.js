@@ -1,9 +1,8 @@
-import React, {Component} from 'react'
+import React from 'react'
 import { Button, Card, CardBody, CardImg, CardText, CardTitle} from 'react-bootstrap'
 
-export default class CardTemplate extends Component {
-    render(){
-        const { data } = this.props;
+function CardTemplate(props) {
+        const { data } = props;
         return(
             <Card className='m-4 ' >
                         <CardImg 
@@ -20,4 +19,4 @@ export default class CardTemplate extends Component {
                     </Card>
         )
     }
-}
+export default CardTemplate

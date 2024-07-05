@@ -13,7 +13,10 @@
   }
 }
 
-
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
 
 .card-template {
   flex: 0 0 30%; 

@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CarouselBox from '../components/CarouselBox';
-import PhotoInfo from '../components/vault/PhotoInfo';
 
-export default class Home extends Component {
-    render(){
-        return(
-            <CarouselBox />
-        )
-    }
+
+function Home() {
+    return (
+        CarouselBox('set0')
+    )
 }
+export default Home

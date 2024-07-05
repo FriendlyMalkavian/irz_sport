@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { CardGroup, Container } from 'react-bootstrap'
 import CardInfo from '../components/vault/CardInfo'
 import CardTemplate from '../components/modules/CardTemplate';
 
-export default class ArchiveAccess extends Component {
-    render() {
-        const {id} = this.props;
+function ArchiveAccess(props) {
+
+        const {id} = props;
         const yearId = id; // Пример года
         const eventIds = Object.keys(CardInfo[yearId]);
         const groupedKeys = [];
@@ -30,4 +30,4 @@ export default class ArchiveAccess extends Component {
             </Container>
         );
     }
-}
+export default ArchiveAccess

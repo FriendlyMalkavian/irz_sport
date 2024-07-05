@@ -1,12 +1,11 @@
-import React, {Component} from "react";
+import React from "react";
 import { Nav, Container, NavLink, Navbar, NavbarBrand, NavbarCollapse, NavbarToggle } from "react-bootstrap";
 import logo from './logo.svg'
 
 
-export default class Header extends Component{
-    render(){
-        return(
-            <>
+function Header() {
+    return (
+        <>
             <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
                 <Container>
                     <NavbarBrand href="/">
@@ -30,8 +29,8 @@ export default class Header extends Component{
                 </Container>
             </Navbar>
 
-            
-            </>
-        )
-    }
+
+        </>
+    )
 }
+export default Header

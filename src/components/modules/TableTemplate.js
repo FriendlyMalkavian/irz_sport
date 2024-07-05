@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import Table from 'react-bootstrap/Table';
 
-export default class TableTemplate extends Component {
-    render() {
-        const { data } = this.props;
+function TableTemplate(props) {
+
+        const { data } = props;
 
         return (
             <>
@@ -29,4 +29,4 @@ export default class TableTemplate extends Component {
             </>
         )
     }
-}
+export default TableTemplate

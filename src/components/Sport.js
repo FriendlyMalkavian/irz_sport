@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TableTemplate from './modules/TableTemplate';
 import SportInfo from './vault/SportInfo';
+import CarouselBox from './CarouselBox'
 
-export default class Sport extends Component {
-    render() {
-        const { id} = this.props;
+function Sport(props) {
+
+        const {id} = props;
         const data = SportInfo[id];
         return (
             <>
@@ -17,7 +18,8 @@ export default class Sport extends Component {
                 </div>
                 <TableTemplate data={data}>
                 </TableTemplate>
+               {CarouselBox(`set${id}`)} 
             </>
         )
     }
-}
+export default Sport
