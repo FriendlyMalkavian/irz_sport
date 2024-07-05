@@ -1,97 +1,27 @@
-import React, {Component} from 'react'
-import { Button, Card, CardBody, CardGroup, CardImg, CardText, CardTitle, Container } from 'react-bootstrap'
-import sport1Img from "../assets/sport1.jpg"
+import React from 'react'
+import { CardGroup, Container } from 'react-bootstrap'
+import CardTemplate from '../components/modules/CardTemplate'
+import CardInfo from '../components/vault/CardInfo'
+import '../App.css'
 
 
-
-export default class Actual extends Component {
-    render(){
-        return(
-            <Container>
-                <h2 className='text-center m-4'> Текущие Соревнования</h2>
-                <CardGroup className='m-4'>
-                    <Card className='m-4 ' >
-                        <CardImg 
-                            variant='top'
-                            src={sport1Img}
-                        />
-                        <CardBody>
-                            <CardTitle>Велопробег Май 2024</CardTitle>
-                            <CardText>
-                                Как описать Велопробег я не знаю :)
-                            </CardText>
-                        <Button variant='primary' href ="/actual/1">Посмотреть результаты</Button>
-                        </CardBody>
-                    </Card>
-                    <Card className='m-4'>
-                        <CardImg 
-                            variant='top'
-                            src={sport1Img}
-                        />
-                        <CardBody>
-                            <CardTitle>Велопробег Май 2024</CardTitle>
-                            <CardText>
-                                Как описать Велопробег я не знаю :)
-                            </CardText>
-                        <Button variant='primary' href ="/actual/2">Посмотреть результаты</Button>
-                        </CardBody>
-                    </Card>
-                    <Card className='m-4'>
-                        <CardImg 
-                            variant='top'
-                            src={sport1Img}
-                        />
-                        <CardBody>
-                            <CardTitle>Велопробег Май 2024</CardTitle>
-                            <CardText>
-                                Как описать Велопробег я не знаю :)
-                            </CardText>
-                        <Button variant='primary' href ="/actual/3">Посмотреть результаты</Button>
-                        </CardBody>
-                    </Card>
-                </CardGroup>
-                <CardGroup className='m-4'>
-                    <Card className='m-4'>
-                        <CardImg 
-                            variant='top'
-                            src={sport1Img}
-                        />
-                        <CardBody>
-                            <CardTitle>Велопробег Май 2024</CardTitle>
-                            <CardText>
-                                Как описать Велопробег я не знаю :)
-                            </CardText>
-                        <Button variant='primary' href ="/actual/4">Посмотреть результаты</Button>
-                        </CardBody>
-                    </Card>
-                    <Card className='m-4'>
-                        <CardImg 
-                            variant='top'
-                            src={sport1Img}
-                        />
-                        <CardBody>
-                            <CardTitle>Велопробег Май 2024</CardTitle>
-                            <CardText>
-                                Как описать Велопробег я не знаю :)
-                            </CardText>
-                        <Button variant='primary' href ="/actual/5">Посмотреть результаты</Button>
-                        </CardBody>
-                    </Card>
-                    <Card className='m-4'>
-                        <CardImg 
-                            variant='top'
-                            src={sport1Img}
-                        />
-                        <CardBody>
-                            <CardTitle>Велопробег Май 2024</CardTitle>
-                            <CardText>
-                                Как описать Велопробег я не знаю :)
-                            </CardText>
-                        <Button variant='primary' href ="/actual/6">Посмотреть результаты</Button>
-                        </CardBody>
-                    </Card>
-                </CardGroup>
-            </Container>
-        )
+function Actual() {
+    const cardKeys = Object.keys(CardInfo[2024]);
+    const groupedKeys = [];
+    for (let i = 0; i < cardKeys.length; i += 3) {
+        groupedKeys.push(cardKeys.slice(i, i + 3));
     }
+    return (
+        <Container>
+            <h2 className='text-center m-4'>Текущие Соревнования</h2>
+            {groupedKeys.map((group, index) => (
+                <CardGroup key={index} className='card-group m-4'>
+                    {group.map((id) => (
+                        <CardTemplate className="card-template" key={id} data={CardInfo[2024][id]} />
+                    ))}
+                </CardGroup>
+            ))}
+        </Container>
+    );
 }
+export default Actual
