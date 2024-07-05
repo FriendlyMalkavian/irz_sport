@@ -18,7 +18,7 @@ function Sport(props) {
                 </div>
                 <TableTemplate data={data}>
                 </TableTemplate>
-               {CarouselBox(`set${id}`)} 
+               <CarouselBox photoInfo={`set${id}`}/> 
             </>
         )
     }
