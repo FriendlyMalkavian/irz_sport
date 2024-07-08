@@ -3,9 +3,8 @@ import TableTemplate from './modules/TableTemplate';
 import SportInfo from './vault/SportInfo';
 import CarouselBox from './CarouselBox'
 
-function Sport(props) {
+function Sport({id}) {
 
-        const {id} = props;
         const data = SportInfo[id];
         return (
             <>

@@ -2,9 +2,7 @@ import React from 'react'
 
 import Table from 'react-bootstrap/Table';
 
-function TableTemplate(props) {
-
-        const { data } = props;
+function TableTemplate({data}) {
 
         return (
             <>
