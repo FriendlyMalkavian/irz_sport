@@ -1,12 +1,12 @@
-import React from 'react'
-
+import React from 'react';
 import Table from 'react-bootstrap/Table';
+import { Container } from 'react-bootstrap';
 
-function TableTemplate({data}) {
-
-        return (
-            <>
-                <Table className='d-flex justify-content-center' bordered="True" striped="columns">
+function TableTemplate({ data }) {
+    return (
+        <>
+            <Container className="responsive-container">
+                <Table className='table-responsive' bordered striped>
                     <tbody>
                         <tr>
                             <th>#</th>
@@ -24,7 +24,9 @@ function TableTemplate({data}) {
                         ))}
                     </tbody>
                 </Table>
-            </>
-        )
-    }
-export default TableTemplate
+            </Container>
+        </>
+    );
+}
+
+export default TableTemplate;

@@ -13,6 +13,37 @@
   }
 }
 
+body {
+  overflow-y:auto;
+}
+
+@media (max-width: 767px) {
+  .responsive-container {
+      width: 100%;
+      overflow-x: auto;
+  }
+  .table-responsive {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+  .table-responsive > table {
+      width: 100%;
+      min-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-container {
+      width: 75%;
+  }
+  .table-responsive {
+      width: 75%;
+  }
+}
+
+
 .carousel-item img {
   width: 100vw;
   height: 70vh;
