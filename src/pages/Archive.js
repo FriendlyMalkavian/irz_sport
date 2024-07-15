@@ -6,8 +6,8 @@ import CardTemplate from '../components/modules/CardTemplate';
 function Archive() {
     const cardKeys = Object.keys(ArchiveInfo);
     const groupedKeys = [];
-    for (let i = 0; i < cardKeys.length; i += 3) {
-        groupedKeys.push(cardKeys.slice(i, i + 3));
+    for (let i = 0; i < cardKeys.length; i += 2) {
+        groupedKeys.push(cardKeys.slice(i, i + 2));
     }
 
     return (

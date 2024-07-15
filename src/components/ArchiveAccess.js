@@ -3,9 +3,8 @@ import { CardGroup, Container } from 'react-bootstrap'
 import CardInfo from '../components/vault/CardInfo'
 import CardTemplate from '../components/modules/CardTemplate';
 
-function ArchiveAccess(props) {
+function ArchiveAccess({id}) {
 
-        const {id} = props;
         const yearId = id; // Пример года
         const eventIds = Object.keys(CardInfo[yearId]);
         const groupedKeys = [];

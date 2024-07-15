@@ -1,8 +1,7 @@
 import React from 'react'
 import { Button, Card, CardBody, CardImg, CardText, CardTitle} from 'react-bootstrap'
 
-function CardTemplate(props) {
-        const { data } = props;
+function CardTemplate({data}) {
         return(
             <Card className='m-4 ' >
                         <CardImg 
